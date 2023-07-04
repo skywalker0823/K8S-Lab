@@ -1,6 +1,14 @@
 # K8S-Lab
 Easy guide for creating a service on GCP using GKE.
 
+## Initial test
+1. Create a cluster.
+2. Create a namespace -> ex. my-sample-app.
+2. kubectl apply -f deployment.yaml
+3. kubectl apply -f service.yaml
+4. kubectl get service -n my-sample-app
+5. localhost:30009
+
 
 ## Basic steps
 1. Set default compute region and zone.
