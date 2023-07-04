@@ -16,7 +16,16 @@ spec:
         app: sample-app
     spec:
       containers:
-      - name: sample-app
-        image: eddiepxl/sample-app:latest
+      - image: eddiepxl/sample-app:latest
+        name: sample-app
+
+        livenessProbe:
+          httpGet:
+            path: /healthy
+            port: 3000
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          periodSeconds: 10
+          failureThreshold: 3
         ports: 
-        - containerPort: 3000
+          - containerPort: 3000

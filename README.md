@@ -1,5 +1,6 @@
 # K8S-Lab
 Easy guide for creating a service on GCP using GKE.
+Final goal with CI/CD.
 
 ## Initial test
 1. Create a cluster.
