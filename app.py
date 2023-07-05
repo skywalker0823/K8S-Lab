@@ -2,9 +2,13 @@ from flask import Flask
 
 app = Flask(__name__)
 
+counter = 0
+
 @app.route("/")
 def hello():
-    return "Hello World!"
+    global counter
+    counter += 1
+    return f"Hello World! -> number~{counter}"
 
 @app.route("/healthy")
 def healthy():
